@@ -1,0 +1,14 @@
+.button {
+    width: 40px;
+    height: 40px;
+    filter: opacity(0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    &:hover {
+        background: #dadada;
+    }
+    &.active {
+        transform: rotateX(180deg);
+    }
+}
