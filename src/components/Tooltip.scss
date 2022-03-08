@@ -1,0 +1,26 @@
+$height: 30px;
+$vertical-padding: 6px;
+
+.tooltip {
+    position: absolute;
+    top: -$vertical-padding - $height;
+    background: black;
+    padding: $vertical-padding 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.3s ease-in-out;
+    span {
+        color: white;
+        font-size: 12px;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: black transparent transparent transparent;
+      }
+}

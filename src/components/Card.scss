@@ -4,17 +4,20 @@
     box-shadow: 1px 1px 4px 0px #c3c3c3;
     border-radius: 3px;
     overflow: hidden;
-    input {
-        height: 40px;
-        width: 80%;
-        border: 1px solid #e4e4e4;
-        border-radius: 3px;
-        font-size: 24px;
-        font-weight: bold;
-        text-align: center;
+    .input-container {
+        position: relative;
         margin: 10px 0;
-        &:focus-visible {
-            text-align: left;
+        input {
+            height: 40px;
+            width: 80%;
+            border: 1px solid #e4e4e4;
+            border-radius: 3px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            &:focus-visible {
+                text-align: left;
+            }
         }
     }
 }
