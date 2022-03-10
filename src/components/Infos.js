@@ -9,7 +9,7 @@ export default function Infos() {
     return (
         <div className="infos">
             {open ?
-            <p>Infos</p>
+            <p>Informations</p>
             : ''}
             <div className="button-container">
                 <img
@@ -20,7 +20,7 @@ export default function Infos() {
                     onMouseLeave={() => setHover(false)}
                 ></img>
                 {hover ?
-                    <Tooltip text={open ? "Close infos" : "See infos"} /> : null
+                    <Tooltip text={open ? "Close informations" : "See informations"} /> : null
                 }
             </div>
         </div>

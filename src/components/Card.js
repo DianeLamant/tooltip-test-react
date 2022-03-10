@@ -20,7 +20,7 @@ export default function Card({number}) {
                     onBlur={() => setInputFocus(false)}
                 ></input>
                 {inputFocus ?
-                    <Tooltip text="Change the title" /> : null
+                    <Tooltip text="You can change the title here." /> : null
                 }
             </div>
             <Infos />

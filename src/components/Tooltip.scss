@@ -9,6 +9,8 @@ $vertical-padding: 6px;
     left: 50%;
     transform: translateX(-50%);
     transition: 0.3s ease-in-out;
+    min-width: 30px;
+    max-width: 120px;
     span {
         color: white;
         font-size: 12px;

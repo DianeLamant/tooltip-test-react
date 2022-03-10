@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './Tooltip.scss';
 
 /**
@@ -8,7 +8,18 @@ import './Tooltip.scss';
  * @returns
  */
 export default function Tooltip({text}) {
+    const inputRef = useRef(null);
     const [visible, setVisible] = useState(false);
+    const [height, setHeight] = useState(30);
+    let arrowHeight = 5;
+    const style = {
+        top: -height - arrowHeight
+    }
+
+    useEffect(() => {
+        const height = inputRef.current.offsetHeight;
+        setHeight(height);
+     }, [inputRef]);
 
     useEffect(() => {
         // Add an animation when component did mount and
@@ -24,7 +35,7 @@ export default function Tooltip({text}) {
     }, []);
 
     return (
-        <div className="tooltip" style={visible ? {opacity: 1} : {opacity: 0}}>
+        <div className="tooltip" ref={inputRef} style={visible ? {...style, opacity: 1} : {...style, opacity: 0}}>
             <span>{text}</span>
         </div>
     )
